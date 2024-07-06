@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(3.jpg);
+        }
+        .container{
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .calender{
+            transition: 0.3s ease-in-out;
+            height: 400px;
+            width: 400px;
+            backdrop-filter: blur(5px);
+            background-color: rgba(39, 68, 68, 0.16);
+            border-radius:12px ;
+            padding: 40px;
+        }
+        .calender:hover{
+            box-shadow: 3px 3px 20px 8px rgba(192, 192, 192, 0.291);
+
+        }
+        .calender .logo h2{
+            text-align: center;
+            color: white;
+        }
+        table{
+            display: flex;
+            justify-content: center;
+        }
+      
+       th{   
+
+            padding: 12px;
+            cursor: pointer;
+        color: white;
+            text-transform: uppercase;
+        
+           
+        }
+        td{
+        transition: 0.4s ;
+            color: rgb(251, 129, 129);
+            cursor: pointer;
+            text-align: center;
+            padding: 13px;
+            
+        }
+        .name.active{
+            color: black;
+            font-weight: bold;
+            transition: 0.5s ;
+            background-color: white;
+            border-radius: 50%;
+          
+            
+
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="calender">
+                <div class="logo">
+                    <h2>calender 2024</h2>
+                </div>
+               
+                <table>
+                    <tr >
+                        <th >mon</th>
+                        <th >tue</th>
+                        <th >thu</th>
+                        <th >wed</th>
+
+                        <th >fri</th>
+                        <th >sat</th>
+                        <th >sun</th>
+                        
+                    </tr>
+
+                    <tr class="head">
+                        <td class="name active">1</td>
+                        <td class="name">2</td>
+                        <td class="name">3</td>
+                        <td class="name">4</td>
+                        <td class="name">5</td>
+                        <td class="name">6</td>
+                        <td class="name">7</td>
+                        
+                        
+                    </tr>
+
+
+                    <tr class="head">
+                        <td class="name">8</td>
+                        <td class="name">9</td>
+                        <td class="name">10</td>
+                        <td class="name">11</td>
+                        <td class="name">12</td>
+                        <td class="name">13</td>
+                        <td class="name">14</td>
+                        
+                        
+                    </tr>
+
+
+
+                    <tr class="head">
+                        <td class="name">15</td>
+                        <td class="name">16</td>
+                        <td class="name">17</td>
+                        <td class="name">18</td>
+                        <td class="name">19</td>
+                        <td class="name">20</td>
+                        <td class="name">21</td>
+                        
+                        
+                    </tr>
+
+
+                    <tr class="head">
+                        <td class="name ">22</td>
+                        <td class="name">23</td>
+                        <td class="name">24</td>
+                        <td class="name">25</td>
+                        <td class="name">26</td>
+                        <td class="name">27</td>
+                        <td class="name">28</td>
+                        
+                        
+                  
+
+                  
+                </table>
+          
+    </div>
+</tr>
+
+</div>
+        <script>
+            let date =document.querySelectorAll('.name')
+            date.forEach((head,index)=>{
+                head.addEventListener('click',()=>{
+                    let activeitem =document.querySelector('.name.active')
+                    let count =index
+             activeitem.classList.remove('active')
+             date[count].classList.add('active')
+            
+             
+
+
+                })
+
+
+            })
+
+        </script>
+</body>
+</html>
